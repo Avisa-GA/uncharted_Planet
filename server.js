@@ -38,7 +38,11 @@ app.post('/planet' ,(req, res) => {
 })
 
 // SHOW
-
+app.get('/planet/:index', (req, res) => {
+    res.render('show.ejs', {
+        info: planetInfos[req.params.index]
+    })
+})
 
 // DELETE
 app.delete('/planet/:index', (req, res) => {
@@ -46,6 +50,13 @@ app.delete('/planet/:index', (req, res) => {
     res.redirect('/planet')
 })
 
+// EDIT
+app.get('/planet/:index/edit', (req, res) => {
+    res.render('edit.ejs', {
+        info: planetInfos[req.params.index],
+        x: req.params.index
+    })
+})
 
 // LISTEN TO PORT
 app.listen(port, () => {

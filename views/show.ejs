@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head.ejs') %>
+</head>
+
+<body>
+    <div class="container">
+        <button><a href="/planet">Back</a></button>
+        <table>
+            <tr>
+                <th>name</th>
+                <td><%= info.name%></td>
+            </tr>
+            <tr>
+                <th>from</th>
+                <td><%= info.description%></td>
+            </tr>
+           
+        </table>
+
+    </div>
+
+</body>
+
+</html>

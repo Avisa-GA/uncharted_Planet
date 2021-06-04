@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head.ejs') %>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action='/planet<%= x %>?_method=PUT' method="POST">
+            <input type="text" placeholder="Enter your name" name="name"><br />
+            <input type="text" placeholder="Add description" name="description">
+            <br>
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+</body>
+
+</html>
